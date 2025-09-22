@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner ss=new Scanner(System.in);
+        int array[]=new int[10];
+        System.out.println("Enter array elements:");
+        for(int i=0;i<5;i++){
+            array[i]=ss.nextInt();
+        }
+        for(int i=0;i<5-1;i++){
+            for(int j=i+1;j<5;j++){
+            if(array[i]>array[j]){
+                int temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
+            }
+        }
+        }
+        System.out.println("Sorted array:");
+         for(int i=0;i<5;i++){
+            System.out.println(array[i]);     
+         }
+    }
+}
+//What will this do
+//Suppose array=[5,7,8,3,4]
+//It returns Sorted array as [3,4,5,7,8]
